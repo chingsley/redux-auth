@@ -1,12 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { fetchGasPrices } from '../store/actions';
+import { fetchGasListing } from '../store/actions';
 
 import GasCard from './GasCard';
 
-class GasPrices extends React.Component {
+class GasListing extends React.Component {
   componentDidMount() {
-    this.props.fetchGasPrices();
+    this.props.fetchGasListing();
   }
   render() {
     console.log('\n\ndata =  ', this.props.data);
@@ -34,4 +34,4 @@ const mapStateToProps = (state) => ({
   data: state.data,
 });
 
-export default connect(mapStateToProps, { fetchGasPrices })(GasPrices);
+export default connect(mapStateToProps, { fetchGasListing })(GasListing);

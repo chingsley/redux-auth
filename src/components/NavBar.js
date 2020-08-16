@@ -2,28 +2,45 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-const Nav = styled.ul`
-  display: flex;
-  border: 1px solid #2980b9;
-  padding: 0;
-  margin: 0;
+const Nav = styled.div`
+  margin-bottom: 4rem;
+  // box-shadow: inset 0 -20px 20px -30px #34495e;
+  box-shadow: 0 20px 20px -28px #34495e;
+  border-bottom: 1px solid transparent;
 
-  li {
+  ul {
+    display: flex;
+    // border: 1px solid #2980b9;
+    padding: 0;
+    margin: 2rem auto;
+    justify-content: flex-end;
+    width: 90vw;
+
+    li:not(:last-child) {
+      margin-right: 1.3rem;
+    }
+
+    a {
+      color: #34495e;
+      font-size: 1.1rem;
+    }
   }
 `;
 
 function NavBar() {
   return (
-    <Nav className="nav-bar">
-      <li>
-        <Link to="/login">Login</Link>
-      </li>
-      <li>
-        <Link to="/protected">view all</Link>
-      </li>
-      <li>
-        <Link to="/gas-levels">view special</Link>
-      </li>
+    <Nav>
+      <ul>
+        <li>
+          <Link to="/login">Login</Link>
+        </li>
+        <li>
+          <Link to="/protected">Gas Listing</Link>
+        </li>
+        <li>
+          <Link to="/gas-levels">Special Listing</Link>
+        </li>
+      </ul>
     </Nav>
   );
 }

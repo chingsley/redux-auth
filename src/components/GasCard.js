@@ -63,13 +63,17 @@ const GasCardContainer = styled.div`
       border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
     }
   }
-  .btn {
-    border: none;
-    outline: none;
-    background-color: #2980b9;
-    height: 2.5rem;
-    color: white;
-    font-size: bold;
+  .btn-container {
+    text-align: center;
+
+    .btn {
+      border: none;
+      outline: none;
+      background-color: #2980b9;
+      height: 2.5rem;
+      color: white;
+      font-size: bold;
+    }
   }
 `;
 
@@ -94,7 +98,9 @@ const GasCard = ({ record: { row, id, ...rest } }) => {
           </li>
         ))}
       </ul>
-      <button className="btn">view more</button>
+      <div className="btn-container">
+        <button className="btn">view more</button>
+      </div>
     </GasCardContainer>
   );
 };

@@ -53,7 +53,7 @@ export const logout = () => (dispatch) => {
   dispatch({});
 };
 
-export const fetchGasPrices = () => async (dispatch) => {
+export const fetchGasListing = () => async (dispatch) => {
   try {
     dispatch({
       type: FETCH_STATUS_START,
@@ -68,7 +68,7 @@ export const fetchGasPrices = () => async (dispatch) => {
     console.log(response.data);
     dispatch({
       type: FETCH_STATUS_SUCCESS,
-      payload: data.slice(1, 10),
+      payload: data.slice(1, 50),
     });
   } catch (error) {
     const serverError = error.message.match(/network/i)
