@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import PrivateRoute from './PrivateRoute';
 import Login from './components/Login';
 import GasListing from './components/GasListing';
-import GasLevels from './components/GasLevels';
+import GasPrices from './components/GasPrices';
 import NavBar from './components/NavBar';
 
 function App() {
@@ -25,7 +25,7 @@ function App() {
         <NavBar />
         <Route path="/login" component={Login} />
         <PrivateRoute exact path="/protected" component={GasListing} />
-        <PrivateRoute exact path="/gas-levels" component={GasLevels} />
+        <PrivateRoute exact path="/gas-levels" component={GasPrices} />
       </div>
     </Router>
   );

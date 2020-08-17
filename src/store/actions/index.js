@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { axiosWithAuth } from '../../axiosWithAuth';
 
 export const LOGIN_START = 'LOGIN_START';
 export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
@@ -61,7 +62,8 @@ export const fetchGasListing = () => async (dispatch) => {
     const url = 'http://localhost:5000/api/data';
     const token = localStorage.getItem('token-for-redux-auth-app');
     const headers = { authorization: token };
-    const response = await axios.get(url, { headers });
+    // const response = await axios.get(url, { headers });
+    const response = await axiosWithAuth().get(url);
     const {
       data: { data },
     } = response;
@@ -79,4 +81,19 @@ export const fetchGasListing = () => async (dispatch) => {
       payload: `${error.message}. ${serverError}`,
     });
   }
+};
+
+export const FETCH_PRICES_START = 'FETCH_PRICES_START';
+export const FETCH_PRICES_SUCCESS = 'FETCH_PRICES_SUCCESS';
+export const FETCH_PRICES_FAILURE = 'FETCH_PRICES_FAILURE';
+export const getData = () => (dispatch) => {
+  dispatch({ type: FETCH_PRICES_START });
+  axiosWithAuth()
+    .get('/api/data')
+    .then((res) => {
+      dispatch({ type: FETCH_PRICES_SUCCESS, payload: res.data.data });
+    })
+    .catch((err) => {
+      dispatch({ type: FETCH_PRICES_FAILURE });
+    });
 };
