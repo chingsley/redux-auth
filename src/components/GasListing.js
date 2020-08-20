@@ -9,8 +9,6 @@ class GasListing extends React.Component {
     this.props.fetchGasListing();
   }
   render() {
-    console.log('\n\ndata =  ', this.props.data);
-    console.log('\n\n error = ', this.props.error);
     return (
       <>
         {this.props.error && (

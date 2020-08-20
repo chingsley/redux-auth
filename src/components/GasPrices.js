@@ -29,6 +29,7 @@ class GasPrices extends React.Component {
 
   render() {
     const gasPrices = this.formatData();
+    console.log(gasPrices);
     return (
       <div className="gas-prices">
         <div className="title-wrapper">
@@ -64,8 +65,8 @@ class GasPrices extends React.Component {
                 <div className="year">2012</div>
               </div>
               <div>
-                {gasPrices.map((price) => (
-                  <div className="price-graph">
+                {gasPrices.map((price, index) => (
+                  <div key={index} className="price-graph">
                     <div className="date">
                       <p>{price.date}</p>
                     </div>

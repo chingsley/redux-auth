@@ -1,0 +1,9 @@
+.title-wrapper {
+  border: 1px solid salmon;
+  background-color: white;
+  display: flex;
+  width: fit-content;
+  flex-flow: column nowrap;
+  margin: 0 auto;
+  padding: 24px 58px;
+}

@@ -6,6 +6,7 @@ import Login from './components/Login';
 import GasListing from './components/GasListing';
 import GasPrices from './components/GasPrices';
 import NavBar from './components/NavBar';
+import GasPriceHistogram from './components/GasPriceHistogram';
 
 function App() {
   return (
@@ -26,6 +27,11 @@ function App() {
         <Route path="/login" component={Login} />
         <PrivateRoute exact path="/protected" component={GasListing} />
         <PrivateRoute exact path="/gas-levels" component={GasPrices} />
+        <Route
+          exact
+          path="/gas-price-histogram"
+          component={GasPriceHistogram}
+        />
       </div>
     </Router>
   );

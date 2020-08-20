@@ -40,6 +40,9 @@ function NavBar() {
         <li>
           <Link to="/gas-levels">Special Listing</Link>
         </li>
+        <li>
+          <Link to="/gas-price-histogram">View Chart</Link>
+        </li>
       </ul>
     </Nav>
   );
