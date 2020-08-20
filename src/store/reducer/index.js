@@ -15,7 +15,7 @@ import {
 
 const initialState = {
   token: null,
-  isLoading: true,
+  isLoading: false,
   error: '',
   data: [],
   gasPrices: [],

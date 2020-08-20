@@ -1,11 +1,64 @@
-/* .hist-spinner {
+.hist-gas-wrapper {
+  border: 1px solid salmon;
   background-color: rgba(0, 0, 0, 0.1);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+  display: flex;
+  width: fit-content;
+  flex-flow: column nowrap;
+  margin: 0 auto;
+  padding: 24px 58px;
+}
+
+.hist-columns {
+  display: flex;
+}
+
+.hist-year {
+  border-left: 1px solid #ea7158;
+  border-top: 1px solid #ea7158;
+  border-bottom: 1px solid #ea7158;
+  margin: 0 0 32px;
+  height: 376px;
+  font-size: 8px;
+  color: #ea7158;
   display: flex;
   align-items: center;
   justify-content: center;
-} */
+  margin-right: 10px;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+.hist-year:first-of-type {
+  margin-top: 10px;
+  /* border: 1px solid black; */
+}
+.hist-year:last-of-type {
+  height: 205px;
+  margin: 0;
+  /* border: 1px solid black; */
+}
+
+.hist-price-graph {
+  position: relative;
+}
+
+.hist-date {
+  position: absolute;
+  left: 0;
+  top: -3px;
+  z-index: 12;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  left: -6px;
+  background-color: #ea7158;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hist-date > p {
+  color: #ffffff;
+  font-size: 10px;
+  margin: 0;
+}
