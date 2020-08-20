@@ -1,9 +1,11 @@
-.title-wrapper {
-  border: 1px solid salmon;
-  background-color: white;
+/* .hist-spinner {
+  background-color: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   display: flex;
-  width: fit-content;
-  flex-flow: column nowrap;
-  margin: 0 auto;
-  padding: 24px 58px;
-}
+  align-items: center;
+  justify-content: center;
+} */

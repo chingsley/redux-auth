@@ -22,7 +22,7 @@ const Nav = styled.div`
 
     a {
       color: #34495e;
-      font-size: 1.1rem;
+      font-size: 14px;
     }
   }
 `;

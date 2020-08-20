@@ -46,13 +46,13 @@ class GasPrices extends React.Component {
           <div className="Hawaii-key" />
           <p className="Hawaii-key-text">Hawaii Prices</p>
         </div>
-        {this.props.fetchingData && (
+        {this.props.isLoading && (
           <div className="key spinner">
             <Loader type="Puff" color="#204963" height="60" width="60" />
             <p>Loading Data</p>
           </div>
         )}
-        {!this.fetchingData && gasPrices.length > 0 && (
+        {!this.isLoading && gasPrices.length > 0 && (
           <div className="gas-wrapper">
             <div className="columns">
               <div className="months">
@@ -100,9 +100,9 @@ class GasPrices extends React.Component {
   }
 }
 
-const mapStateToProps = ({ gasPrices, fetchingData }) => ({
+const mapStateToProps = ({ gasPrices, isLoading }) => ({
   gasPrices,
-  fetchingData,
+  isLoading,
 });
 
 export default withRouter(connect(mapStateToProps, { getData })(GasPrices));
