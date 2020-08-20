@@ -67,7 +67,7 @@ export const fetchGasListing = () => async (dispatch) => {
     const {
       data: { data },
     } = response;
-    console.log(response.data);
+    // console.log(response.data);
     dispatch({
       type: FETCH_STATUS_SUCCESS,
       payload: data.slice(1, 50),

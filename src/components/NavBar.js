@@ -22,7 +22,7 @@ const Nav = styled.div`
 
     a {
       color: #34495e;
-      font-size: 1.1rem;
+      font-size: 14px;
     }
   }
 `;
@@ -39,6 +39,9 @@ function NavBar() {
         </li>
         <li>
           <Link to="/gas-levels">Special Listing</Link>
+        </li>
+        <li>
+          <Link to="/gas-price-histogram">View Chart</Link>
         </li>
       </ul>
     </Nav>

@@ -65,13 +65,13 @@ const reducer = (state = initialState, action) => {
     case FETCH_PRICES_START:
       return {
         ...state,
-        fetchingData: true,
+        isLoading: true,
         error: false,
       };
     case FETCH_PRICES_SUCCESS:
       return {
         ...state,
-        fetchingData: false,
+        isLoading: false,
         error: '',
         gasPrices: action.payload
           .filter((price) => price.type === 'Gasoline - Regular')
