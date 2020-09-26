@@ -6,7 +6,7 @@ import Loader from 'react-loader-spinner';
 class Login extends React.Component {
   state = {
     credentials: {
-      username: '',
+      username: 'chingsley',
       password: '',
     },
   };
